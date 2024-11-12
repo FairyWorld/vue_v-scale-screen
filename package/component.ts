@@ -7,6 +7,7 @@ import {
   onUnmounted,
   PropType,
   reactive,
+  onActivated,
   ref
 } from 'vue'
 
@@ -223,6 +224,7 @@ export default defineComponent({
         document.body.style.overflow = bodyOverflowHidden
       }
     })
+    onActivated(updateScale)
 
     return () => {
       return h(
